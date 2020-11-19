@@ -33,26 +33,48 @@ namespace Nova_pasta
             string nome = Console.ReadLine();
             while(String.IsNullOrEmpty(nome))
             {
-             Console.Write("Nome inválido, tente novamente");
+             Console.WriteLine("Nome inválido, tente novamente");
              nome = Console.ReadLine();   
             }
             Console.Write("Digite sua idade: ");
             int idade = int.Parse(Console.ReadLine());
-            while(idade < 0 || idade > 150)
+            while(idade <= 0 || idade > 150)
             {
-                Console.Write("Idade inválida, tente novamente");
+                Console.WriteLine("Idade inválida, tente novamente");
                 idade = int.Parse(Console.ReadLine());
             }
             Console.Write("Digite seu salário: ");
             float salario = float.Parse(Console.ReadLine());
-            while(salario < 0)
+            while(salario <= 0)
             {
-                Console.Write("Salário inválida, tente novamente");
+                Console.WriteLine("Salário inválida, tente novamente");
                 salario = float.Parse(Console.ReadLine());
             }
             Console.WriteLine("Qual seu estado civil?");
             Console.WriteLine("'s'(solteiro(a), 'c'(casado(a), 'v'(viuvo(a), 'd'(divorciado(a)");
             char estado = char.Parse(Console.ReadLine());
+            switch(estado)
+            {
+                case 's':
+                    Console.WriteLine("Obrigado tenha um bom dia");
+                break;
+
+                case 'c':
+                     Console.WriteLine("Obrigado tenha um bom dia");
+                break;
+
+                case 'v':
+                     Console.WriteLine("Obrigado tenha um bom dia");
+                break;
+                
+                case 'd':
+                     Console.WriteLine("Obrigado tenha um bom dia");
+                break;
+                default:
+                    Console.WriteLine("Estado civil inválido, por favor tente novamente");
+                    estado = char.Parse(Console.ReadLine());
+                break;
+            }
             
 
         }
